@@ -19,7 +19,7 @@
     "register-service-worker": "^1.7.1",
     "vue": "^3.2.20",
     "vue-class-component": "^8.0.0-0",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
