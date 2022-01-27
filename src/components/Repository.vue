@@ -53,7 +53,7 @@ export default defineComponent({
 }
 
 .gh-repo {
-  border: 1px solid #14355e;
+  border: 1px solid $primary-color;
   border-radius: 3px;
   height: 100%;
   padding: 12px;

@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  background: #ece5ba;
+  background: $secondary-color;
 }
 
 #app {
