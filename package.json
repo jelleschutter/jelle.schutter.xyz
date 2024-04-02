@@ -38,6 +38,6 @@
     "eslint-plugin-vue": "^7.20.0",
     "sass": "^1.72.0",
     "sass-loader": "^8.0.2",
-    "typescript": "~5.0.4"
+    "typescript": "~5.4.3"
   }
 }
