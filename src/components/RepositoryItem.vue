@@ -24,17 +24,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
+import type { PropType } from 'vue';
 import moment from 'moment';
-import { Repository as RepositoryModel } from '../models/Repository';
+import type { Repository as RepositoryModel } from '../models/Repository';
 
 export default defineComponent({
+  name: 'RepositoryItem',
   props: {
-    repo: Object as PropType<RepositoryModel>,
+    repo: {
+      type: Object as PropType<RepositoryModel>,
+      required: true,
+    },
   },
   computed: {
     lastUpdate(): string {
-      return moment(this.repo?.pushed_at).fromNow();
+      return moment(this.repo.pushed_at).fromNow();
     },
   },
 });
