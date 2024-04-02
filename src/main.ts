@@ -7,7 +7,6 @@ import {
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
-import './registerServiceWorker';
 import router from './router';
 
 library.add(faArchive);

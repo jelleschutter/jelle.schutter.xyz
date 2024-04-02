@@ -1,14 +1,16 @@
 <template>
   <div class="gh-repo-list">
-    <Repository v-for="repo in repos" :key="repo.id" :repo="repo"/>
+    <RepositoryItem v-for="repo in repos" :key="repo.id" :repo="repo"/>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, Ref, defineComponent } from 'vue';
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import Repository from './Repository.vue';
-import { Repository as RepositoryModel } from '../models/Repository';
+import { ref, defineComponent } from 'vue';
+import type { Ref } from 'vue';
+import axios from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import RepositoryItem from './RepositoryItem.vue';
+import type { Repository as RepositoryModel } from '../models/Repository';
 
 export default defineComponent({
   props: {
@@ -18,7 +20,7 @@ export default defineComponent({
     },
   },
   components: {
-    Repository,
+    RepositoryItem,
   },
   setup(props) {
     const repos: Ref<RepositoryModel[]> = ref([]);
@@ -34,9 +36,6 @@ export default defineComponent({
     axios(config)
       .then((res: AxiosResponse<RepositoryModel[]>) => {
         repos.value = res.data;
-      })
-      .catch((error: Error) => {
-        console.log(error);
       });
 
     return {
