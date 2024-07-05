@@ -6,7 +6,7 @@
     :is_even="i % 2 === 0"
     :has_company_changed="i === 0 || work_experiences[i - 1].company !== work_experience.company"
     :observer="observer ? observer : undefined"
-    />
+  />
 </template>
 
 <script lang="ts">
@@ -27,13 +27,10 @@ export default defineComponent({
     };
   },
   created() {
-    this.observer = new IntersectionObserver(
-      this.onElementObserved,
-      {
-        root: this.$el,
-        threshold: 0.1,
-      },
-    );
+    this.observer = new IntersectionObserver(this.onElementObserved, {
+      root: this.$el,
+      threshold: 0.1,
+    });
   },
   beforeUnmount() {
     if (this.observer) {
@@ -57,6 +54,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
