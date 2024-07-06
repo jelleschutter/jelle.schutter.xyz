@@ -40,7 +40,7 @@ export default defineComponent({
     RepositoryList,
     WorkExperienceList,
   },
-  data(): { work_experiences: WorkExperienceModel[], email: string } {
+  data(): { work_experiences: WorkExperienceModel[]; email: string } {
     return {
       work_experiences: [
         {
