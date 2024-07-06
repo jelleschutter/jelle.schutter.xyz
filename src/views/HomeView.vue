@@ -96,12 +96,19 @@ main {
     width: 50%;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
 
   h2 {
+    display: inline-block;
+    position: relative;
+    left: 50%;
     margin-top: 1.5em;
+    padding-bottom: 0.2em;
+    transform: translateX(-50%);
+    border-bottom: 3px solid $primary-color;
   }
 
   hr {
