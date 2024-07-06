@@ -19,10 +19,10 @@
         </div>
       </a>
     </div>
-     <h2 id="jobs">Jobs</h2>
-    <WorkExperienceList :work_experiences="work_experiences"/>
     <h2 id="projects">Projects</h2>
-    <RepositoryList username="jelleschutter"/>
+    <RepositoryList username="jelleschutter" />
+    <h2 id="jobs">Jobs</h2>
+    <WorkExperienceList :work_experiences="work_experiences" />
   </main>
   <footer>
     Jelle Schutter &copy; 2021
