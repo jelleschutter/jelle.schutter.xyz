@@ -1,6 +1,6 @@
 <template>
   <div class="gh-repo-list">
-    <RepositoryItem v-for="repo in repos" :key="repo.id" :repo="repo"/>
+    <RepositoryItem v-for="repo in repos" :key="repo.id" :repo="repo" />
   </div>
 </template>
 
@@ -33,10 +33,9 @@ export default defineComponent({
       },
     };
 
-    axios(config)
-      .then((res: AxiosResponse<RepositoryModel[]>) => {
-        repos.value = res.data;
-      });
+    axios(config).then((res: AxiosResponse<RepositoryModel[]>) => {
+      repos.value = res.data;
+    });
 
     return {
       repos,

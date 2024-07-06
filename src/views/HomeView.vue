@@ -1,22 +1,16 @@
 <template>
   <main>
     <h1>Jelle Schutter</h1>
-    <hr>
+    <hr />
     <div class="socials">
       <a class="social" href="https://github.com/jelleschutter/">
-        <div>
-          <fa-icon class="social-icon" :icon="['fab', 'github']"/>jelleschutter
-        </div>
+        <div><fa-icon class="social-icon" :icon="['fab', 'github']" />jelleschutter</div>
       </a>
       <a class="social" href="https://www.linkedin.com/in/jelleschutter/">
-        <div>
-          <fa-icon class="social-icon" :icon="['fab', 'linkedin']"/>jelleschutter
-        </div>
+        <div><fa-icon class="social-icon" :icon="['fab', 'linkedin']" />jelleschutter</div>
       </a>
       <a class="social" :href="'mailto:' + email">
-        <div>
-          <fa-icon class="social-icon" :icon="['far', 'envelope']"/>{{ email }}
-        </div>
+        <div><fa-icon class="social-icon" :icon="['far', 'envelope']" />{{ email }}</div>
       </a>
     </div>
     <h2 id="projects">Projects</h2>
@@ -24,9 +18,7 @@
     <h2 id="jobs">Jobs</h2>
     <WorkExperienceList :work_experiences="work_experiences" />
   </main>
-  <footer>
-    Jelle Schutter &copy; 2021
-  </footer>
+  <footer>Jelle Schutter &copy; 2021</footer>
 </template>
 
 <script lang="ts">
