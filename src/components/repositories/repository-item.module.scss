@@ -1,0 +1,53 @@
+@import '../../app/variables.scss';
+
+.repository-container {
+  width: 100%;
+  padding: 7px;
+  text-decoration: none;
+  color: inherit;
+
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.repository {
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  height: 100%;
+  padding: 12px;
+
+  .title {
+    font-size: 1.1em;
+    margin: 0;
+  }
+
+  .last-update {
+    margin: -1px 0 0 0;
+    font-size: 0.8em;
+    word-spacing: -3px;
+  }
+
+  .description {
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .tags {
+    display: flex;
+    margin: 10px 0 0 0;
+    font-size: 0.9em;
+
+    .tag {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      .tag-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
