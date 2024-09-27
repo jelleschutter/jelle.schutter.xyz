@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArchive, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { faFile, faStar } from '@fortawesome/free-regular-svg-icons';
 
+import type { Repository } from './model';
 import styles from './repository-item.module.scss';
 
 export default function RepositoryItem({
@@ -11,8 +12,6 @@ export default function RepositoryItem({
   repository: Repository;
 }>) {
   const lastUpdate = moment(repository.pushed_at).fromNow();
-
-  console.log('styles', styles);
 
   return (
     <a className={styles['repository-container']} href={repository.html_url}>

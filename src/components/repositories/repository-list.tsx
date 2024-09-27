@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import RepositoryItem from './repository-item';
 import styles from './repository-list.module.scss';
+import type { Repository } from './model';
 
 export default function RepositoryList({
   username,

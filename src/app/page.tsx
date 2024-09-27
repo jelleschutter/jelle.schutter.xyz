@@ -5,6 +5,40 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './style.module.scss';
 
 import RepositoryList from '../components/repositories/repository-list';
+import WorkExperienceList from '@/components/work-experience/work-experience-list';
+import type { WorkExperience } from '@/components/work-experience/model';
+
+const workExperiences: WorkExperience[] =  [
+  {
+    companyName: 'watson News',
+    position: 'Data Analyst',
+    startDate: '2023-08-01',
+  },
+  {
+    companyName: 'BlueMouse GmbH',
+    position: 'Web Developer',
+    startDate: '2022-10-01',
+    endDate: '2023-07-31',
+  },
+  {
+    companyName: 'ABB',
+    position: 'Data Science Intern',
+    startDate: '2022-03-01',
+    endDate: '2023-02-28',
+  },
+  {
+    companyName: 'BlueMouse GmbH',
+    position: 'Web Developer',
+    startDate: '2020-07-01',
+    endDate: '2020-08-31',
+  },
+  {
+    companyName: 'BlueMouse GmbH',
+    position: 'Junior Web Developer',
+    startDate: '2019-07-01',
+    endDate: '2020-06-30',
+  },
+];
 
 export default function Home() {
 
@@ -37,7 +71,7 @@ export default function Home() {
       <h2 id="projects">Projects</h2>
       <RepositoryList username="jelleschutter" />
       <h2 id="jobs">Jobs</h2>
-      {/* <WorkExperienceList :work_experiences="work_experiences" /> */}
+      <WorkExperienceList workExperiences={workExperiences} />
     </div>
   );
 }

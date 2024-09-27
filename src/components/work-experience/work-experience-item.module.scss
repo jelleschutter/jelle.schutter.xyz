@@ -1,0 +1,147 @@
+@import '../../app/variables.scss';
+
+.work-experiences--wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.work-experiences--filler {
+  display: none;
+  width: 50%;
+}
+
+.work-experiences--item {
+  position: relative;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.work-experiences--item .work-experiences--content {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  transition:
+    opacity 0.5s,
+    top 0.5s;
+}
+
+.work-experiences--item.work-experiences--item--visible
+  .work-experiences--content {
+  opacity: 1;
+  top: 0;
+}
+
+.work-experiences--item h4 {
+  margin: 0.3em 0;
+}
+
+.work-experiences--company {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.work-experiences--company::after {
+  content: '';
+  display: block;
+  clear: both;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.work-experiences--position {
+  position: relative;
+}
+
+.work-experiences--date {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+
+.work-experiences--item .work-experiences--tick {
+  height: 2px;
+  width: 10px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 12px;
+}
+
+.work-experiences--item.work-experiences--right .work-experiences--company {
+  margin-left: -35px;
+  padding-left: 35px;
+}
+
+.work-experiences--item.work-experiences--left .work-experiences--company {
+  margin-right: -35px;
+  padding-right: 35px;
+}
+
+.work-experiences--item.work-experiences--right
+  .work-experiences--company::after,
+.work-experiences--item.work-experiences--left
+  .work-experiences--company::after {
+  left: -8px;
+  right: auto;
+}
+
+.work-experiences--item.work-experiences--right .work-experiences--tick,
+.work-experiences--item.work-experiences--left .work-experiences--tick {
+  left: -35px;
+}
+
+.work-experiences--right,
+.work-experiences--left {
+  order: 2;
+  text-align: left;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .work-experiences--filler {
+    display: block;
+  }
+
+  .work-experiences--item {
+    width: 50%;
+  }
+
+  .work-experiences--item .work-experiences--company {
+    margin-top: 20px;
+  }
+
+  .work-experiences--item.work-experiences--left .work-experiences--company {
+    margin-right: -35px;
+    padding-right: 35px;
+  }
+
+  .work-experiences--item.work-experiences--left
+    .work-experiences--company::after {
+    left: auto;
+    right: -8px;
+  }
+
+  .work-experiences--item.work-experiences--left .work-experiences--tick {
+    right: -35px;
+    left: auto;
+  }
+
+  .work-experiences--left {
+    order: 1;
+    text-align: right;
+    border-right: 1px solid var(--primary-color);
+    border-left: none;
+    padding-right: 35px;
+  }
+
+  .work-experiences--right {
+    border-left: 1px solid var(--primary-color);
+  }
+}
