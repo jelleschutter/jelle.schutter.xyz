@@ -2,6 +2,8 @@
   "extends": [
     "next/core-web-vitals",
     "next/typescript",
-    "eslint-config-prettier"
-  ]
+    "eslint-config-prettier",
+    "plugin:eslint-plugin-next-on-pages/recommended"
+  ],
+  "plugins": ["eslint-plugin-next-on-pages"]
 }
