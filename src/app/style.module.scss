@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px 0;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  .social {
+    padding: 5px 0;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    .social-icon {
+      margin-right: 5px;
+      height: 1em;
+    }
+  }
+}
