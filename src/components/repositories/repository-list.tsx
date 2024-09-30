@@ -11,8 +11,21 @@ export default function RepositoryList({
 }: Readonly<{
   username: string;
 }>) {
-  const [repositories, setRepositories] = useState<Repository[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [repositories, setRepositories] = useState<(Repository | undefined)[]>([
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+  ]);
+
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
@@ -20,17 +33,11 @@ export default function RepositoryList({
       .then((response) => response.json())
       .then((data) => {
         setRepositories(data);
-        setLoading(false);
       })
       .catch((error) => {
         setError(error);
-        setLoading(false);
       });
   }, [username]);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
   if (error) {
     return <p>Error: {error.message}</p>;
@@ -38,8 +45,8 @@ export default function RepositoryList({
 
   return (
     <div className={styles['repository-list']}>
-      {repositories.map((repository) => (
-        <RepositoryItem key={repository.id} repository={repository} />
+      {repositories.map((repository, index) => (
+        <RepositoryItem key={index} repository={repository} />
       ))}
     </div>
   );
