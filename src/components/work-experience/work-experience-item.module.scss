@@ -3,6 +3,7 @@
 .work-experiences--wrapper {
   display: flex;
   flex-direction: row;
+  padding-left: 20px;
 }
 
 .work-experiences--filler {
@@ -79,8 +80,8 @@
 }
 
 .work-experiences--item.work-experiences--left .work-experiences--company {
-  margin-right: -35px;
-  padding-right: 35px;
+  margin-left: -35px;
+  padding-left: 35px;
 }
 
 .work-experiences--item.work-experiences--right
@@ -104,7 +105,11 @@
   padding-left: 35px;
 }
 
-@media screen and (min-width: 768px) {
+@include mixins.tablet {
+  .work-experiences--wrapper {
+    padding-left: 0px;
+  }
+
   .work-experiences--filler {
     display: block;
   }
