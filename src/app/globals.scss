@@ -1,15 +1,16 @@
-@import './variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400%3b700&display=swap');
+@use 'variables';
+@use 'mixins';
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400%3b700&display=swap';
 
 :root {
-  --primary-color: #{$primary-color};
-  --primary-bg-color: #{$primary-bg-color};
+  --primary-color: #{variables.$primary-color};
+  --primary-bg-color: #{variables.$primary-bg-color};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #{$primary-bg-color};
-    --primary-bg-color: #{$primary-color};
+    --primary-color: #{variables.$primary-bg-color};
+    --primary-bg-color: #{variables.$primary-color};
   }
 }
 
@@ -30,15 +31,15 @@ main {
   width: 98%;
   margin: 150px auto 0 auto;
 
-  @include tablet {
+  @include mixins.tablet {
     width: 90%;
   }
 
-  @include desktop-sm {
+  @include mixins.desktop-sm {
     width: 80%;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     width: 50%;
   }
 }
