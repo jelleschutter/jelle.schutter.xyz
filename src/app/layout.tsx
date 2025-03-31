@@ -16,6 +16,11 @@ export default function RootLayout({
       <body className="antialiased">
         <main>{children}</main>
         <footer>Jelle Schutter &copy; 2024</footer>
+        <script
+          defer
+          data-domain="jelle.schutter.xyz"
+          src="https://plausible.schutter.xyz/js/script.js"
+        ></script>
       </body>
     </html>
   );
