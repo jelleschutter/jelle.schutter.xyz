@@ -19,7 +19,8 @@ export default function RootLayout({
         <script
           defer
           data-domain="jelle.schutter.xyz"
-          src="https://plausible.schutter.xyz/js/script.js"
+          data-api="/api/event"
+          src="/js/script.js"
         ></script>
       </body>
     </html>
