@@ -30,8 +30,16 @@ export default function RepositoryList({
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}/repos?sort=pushed`)
-      .then((response) => response.json())
+      .then((response) => {
+        return response.json();
+      })
       .then((data) => {
+        if (data.message) {
+          throw new Error(data.message);
+        }
+        if (!Array.isArray(data)) {
+          throw new Error('Invalid data format');
+        }
         setRepositories(data);
       })
       .catch((error) => {
