@@ -12,8 +12,14 @@ import { Suspense } from 'react';
 const workExperiences: WorkExperience[] = [
   {
     companyName: 'watson News',
+    position: 'Data Journalist',
+    startDate: '2024-09-01',
+  },
+  {
+    companyName: 'watson News',
     position: 'Data Analyst',
     startDate: '2023-08-01',
+    endDate: '2024-08-31',
   },
   {
     companyName: 'BlueMouse GmbH',
