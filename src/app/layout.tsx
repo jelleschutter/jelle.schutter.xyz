@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.scss';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import '../lib/fontawesome';
 
 export const metadata: Metadata = {
   title: 'Jelle Schutter',
