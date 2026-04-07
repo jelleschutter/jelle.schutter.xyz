@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArchive, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { faBoxArchive, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { faFile, faStar } from '@fortawesome/free-regular-svg-icons';
 
 import type { Repository } from './model';
@@ -50,7 +50,7 @@ export default function RepositoryItem({
           {repository.archived && (
             <FontAwesomeIcon
               className={styles['title-icon']}
-              icon={faArchive}
+              icon={faBoxArchive}
             />
           )}
           {!repository.archived && repository.fork && (
